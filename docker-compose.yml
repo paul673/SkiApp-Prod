@@ -1,0 +1,10 @@
+services:
+  pipeline:
+    build: .
+    restart: unless-stopped
+    environment:
+      - RUN_HOUR_UTC=2      # nightly run time, UTC
+      - RUN_ON_START=1      # 1 = also run immediately when the container starts
+    volumes:
+      - ./data:/data        # mountains.db lives here, on the host
+ 
