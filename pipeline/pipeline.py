@@ -26,7 +26,7 @@ def query_forecasts(conn, date=None):
     # TODO: change to just query forcasts for future times
     if date:
         query_dataframe(
-        f"SELECT * FROM measured_forecast WHERE >= '{date}';",
+        f"SELECT * FROM measured_forecast WHERE time >= '{date}';",
         conn
         )
 
@@ -39,7 +39,7 @@ def query_forecasts_estimates(conn,date=None):
     # TODO: change to just query forcasts for future times
     if date:
         query_dataframe(
-        f"SELECT * FROM estimated_forecast WHERE >= '{date}';",
+        f"SELECT * FROM estimated_forecast WHERE time >= '{date}';",
         conn
         )
     return query_dataframe(
