@@ -3,7 +3,7 @@ import time
 import traceback
 from datetime import datetime, timedelta, timezone
 
-from pipeline import pipeline   
+from pipeline.pipeline import pipeline   
 
 RUN_HOUR = int(os.environ.get("RUN_HOUR_UTC", "2"))
 RUN_ON_START = os.environ.get("RUN_ON_START", "1") == "1"
